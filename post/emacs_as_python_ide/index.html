@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Emacs as Python IDE - Nmcahzww</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="nathan" /><meta name="description" content="从用 emacs 作为 python 主力的开发环境已经有一阵子了，最近也是因为新的 python 项目折腾了挺久配置，打算记录下这些过程，就想到啥说啥吧。 初识 Emacs 我是从 2018 年 6 月开始" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.74.3 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/emacs_as_python_ide/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Emacs as Python IDE" />
+<meta property="og:description" content="从用 emacs 作为 python 主力的开发环境已经有一阵子了，最近也是因为新的 python 项目折腾了挺久配置，打算记录下这些过程，就想到啥说啥吧。 初识 Emacs 我是从 2018 年 6 月开始" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/emacs_as_python_ide/" />
+<meta property="article:published_time" content="2020-08-08T00:00:00+08:00" />
+<meta property="article:modified_time" content="2020-08-09T01:22:14+08:00" />
+<meta itemprop="name" content="Emacs as Python IDE">
+<meta itemprop="description" content="从用 emacs 作为 python 主力的开发环境已经有一阵子了，最近也是因为新的 python 项目折腾了挺久配置，打算记录下这些过程，就想到啥说啥吧。 初识 Emacs 我是从 2018 年 6 月开始">
+<meta itemprop="datePublished" content="2020-08-08T00:00:00+08:00" />
+<meta itemprop="dateModified" content="2020-08-09T01:22:14+08:00" />
+<meta itemprop="wordCount" content="2184">
+
+
+
+<meta itemprop="keywords" content="emacs,python," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Emacs as Python IDE"/>
+<meta name="twitter:description" content="从用 emacs 作为 python 主力的开发环境已经有一阵子了，最近也是因为新的 python 项目折腾了挺久配置，打算记录下这些过程，就想到啥说啥吧。 初识 Emacs 我是从 2018 年 6 月开始"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Nmcahzww</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Nmcahzww</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Emacs as Python IDE</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-08-08 </span>
+        <div class="post-category">
+            <a href="/categories/emacs/"> emacs </a>
+            </div>
+          <span class="more-meta"> 2184 words </span>
+          <span class="more-meta"> 5 mins read </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#初识-emacs">初识 Emacs</a></li>
+    <li><a href="#打造-python-ide">打造 Python IDE</a>
+      <ul>
+        <li><a href="#elpy">elpy</a></li>
+        <li><a href="#lsp">lsp</a></li>
+        <li><a href="#projectile-and-neotree">projectile &amp; neotree</a></li>
+        <li><a href="#magit">magit</a></li>
+      </ul>
+    </li>
+    <li><a href="#emacs-and-vscode">Emacs &amp; Vscode</a></li>
+    <li><a href="#最近折腾的东西">最近折腾的东西</a>
+      <ul>
+        <li><a href="#python2-dot-7-的问题">python2.7 的问题</a></li>
+        <li><a href="#modeline">modeline</a></li>
+      </ul>
+    </li>
+    <li><a href="#后记">后记</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>从用 emacs 作为 python 主力的开发环境已经有一阵子了，最近也是因为新的 python 项目折腾了挺久配置，打算记录下这些过程，就想到啥说啥吧。</p>
+<h2 id="初识-emacs">初识 Emacs</h2>
+<p>我是从 2018 年 6 月开始写代码的，最开始对编程语言、ide、编辑器等等是完全没有概念的。鉴于当时情况，工作中使用 python， 所以最开始用 pycharm，
+不久后换成了 vscode。当时我的 mentor 是深度 emacs 使用者，从他那边算是对 emacs 有个简单的认知： <code>emacs 是个能干很多事的编辑器</code> 。那时候我还是受了很多他的影响的，
+特别是一些常用的 key bindings，所以不知不觉中，其实已经熟悉了 emacs 的键位。</p>
+<p>后来大约在 2019 年 3 月，我有了想试试 emacs 的念头，现在想起来面对同事圈子内庞大的 vim 党，没选择 vim 完全是因为我两个都不会，选了个脸熟的。
+从那开始度过了安装、过 tutorial 等等，算是能正常的 <del>开启和关闭</del> 使用 emacs 了。那段时间看了很多网上的视频和论坛，打开了配置 emacs 的大门，
+就一直在折腾一些很搞笑的事情，这个好看那个好用什么的，还挺好玩的。</p>
+<h2 id="打造-python-ide">打造 Python IDE</h2>
+<p>到了 2019 年夏天吧，一些简单基本的都折腾累了，那个时候我的 emacs 单纯从编辑体验上来说，相比与 vscode 其实没什么差距，就是好看一点以及更好的 key bindings。
+所以就想把平时写代码的环境挪到 emacs 上。当然 org mode 排除在外&hellip; org 真的太好用太强大了。</p>
+<h3 id="elpy">elpy</h3>
+<p>最早我用的是 elpy 这个包，算是那段时间比较主流的包，主要是提供对语言的基本支持，例如补全跳转之类的。虚拟环境还是用 virtualenvwrapper，最后配合 flycheck 做代码检查。
+最初的情况就这么简单，但是老实说，体验不太好，主要的痛点在于：编辑单个文件的效率有了，但是项目中的 quick navigation 没有，例如项目中的全局搜索、快速 look up 一个文件等。</p>
+<h3 id="lsp">lsp</h3>
+<p>后来被安利了 lsp，替换掉了原来的 elpy。这里是没有解决刚刚的问题的，只是单纯的语言 parse 能力要强很多，这个阶段主要是 <code>lsp-mode + flycheck + company</code> ，
+基本上单个编辑工作流（编辑一个文件 -&gt; 根据引用跳转到另一个文件）已经是能有很好的效率了。</p>
+<h3 id="projectile-and-neotree">projectile &amp; neotree</h3>
+<p>引入 projectile 和 neotree 就是为了解决项目和路径树的问题，projectile 真的挺好用的，一般都会有多个不同的项目需要管理，包括在项目内部也支持很多操作。neotree 主要就是
+在面对大型项目，或者是习惯了 ide 文件目录那种视图的话，比较方便的看路径结构，虽然也许对一个项目熟了之后可能不需要这个，但是我觉得还是能减少大脑思考的时间。</p>
+<h3 id="magit">magit</h3>
+<p>不多说，killer package</p>
+<h2 id="emacs-and-vscode">Emacs &amp; Vscode</h2>
+<p>经过上面的几次变动后，emacs 目前在 python 项目开发中，具有了：</p>
+<ul>
+<li>
+<p>项目间、项目中的各类操作支持（切换、检索）</p>
+</li>
+<li>
+<p>语言支持（提示、补全、检测） 这些能力</p>
+</li>
+</ul>
+<p>基本上项目的开发过程是包括了的，我个人如果项目本地运行的话还是习惯在终端里跑，或者在开发机之类，所以 emacs 配置没有包含运行程序的部分，当然 emacs 也可以
+呼出 shell 或者 ipython 之类的，但是体验并不好，还是终端好用&hellip;</p>
+<p>之前逛 emacs 的论坛，会看到有很多人会说转 vscode 了。我个人对这两个其实不想做什么比较的，因为本质上大家都是成年人了，可以都要啊&hellip; 这两个不是非此即彼的关系。
+例如我写 js 可能就用 vscode 了，或者我用了一阵子 emacs 也会用 vscode 一段时间。当然最关键的，我觉得还是这两者定位本身就不同，至少在我这不同：</p>
+<ul>
+<li>
+<p>emacs 是个让你写东西很爽的东西，能做很多事（写博客、折腾），刚巧你也能通过配置来很舒服的 coding</p>
+</li>
+<li>
+<p>vscode 就是个很好用的写代码的工具，有很多 emacs 没有的东西，例如更炫酷的特效，更多的不需要折腾的扩展，更容易上手的体验</p>
+</li>
+</ul>
+<p>所以目前我双修：）</p>
+<h2 id="最近折腾的东西">最近折腾的东西</h2>
+<p>其实虽然我折腾了一些时间，但是老实说平时空闲时间很少，现在的配置基本属于刚刚够用。我其实很懒，所以能用我基本上不会折腾（除非发现了很炫酷的东西）。</p>
+<h3 id="python2-dot-7-的问题">python2.7 的问题</h3>
+<p>最近是因为新的项目年代久远是 python2.7 写的，还有一些运行环境的不同，所以我之前那份配置的 flycheck 有点问题。
+flycheck 是我的主力代码检测工具，checker 设置的是 pylint，但是 flycheck 默认的路径是 <code>/usr/bin/python3</code> ，所以导致 pylint 不可用。</p>
+<p>我有多个项目和多个虚拟环境，我需要在不同的虚拟环境下，flycheck 能识别到对应的 pylint executable。我之前写 python3 项目的时候，
+我印象中是没有专门配置过这个的，而且我的 pylint 工作的非常好，所以这里我僵住了，不知道为什么突然这样。所以这里在我的配置中加了一些代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">use-package</span> <span class="nv">virtualenvwrapper</span>
+  <span class="nb">:ensure</span> <span class="no">t</span>
+  <span class="nb">:init</span>
+  <span class="p">(</span><span class="nb">setq</span> <span class="nv">venv-workon-cd</span> <span class="no">t</span><span class="p">)</span>
+  <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;venv-postactivate-hook</span> <span class="p">(</span><span class="nb">lambda</span> <span class="p">()</span>
+    <span class="p">(</span><span class="nb">setq</span> <span class="nv">flycheck-python-pylint-executable</span> <span class="p">(</span><span class="nf">concat</span> <span class="s">&#34;/Users/nathan/.virtualenvs/&#34;</span> <span class="nv">venv-current-name</span> <span class="s">&#34;/bin/pylint&#34;</span><span class="p">)))))</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>第二个是，之前的配置加载逻辑有点乱，有时候会出现 lsp 没启动但是 flycheck 已经加载了，后来仔细的调整了几个配置的顺序：</p>
+<p><code>virtualenvwrapper -&gt; flycheck set executable; python-mode -&gt; run lsp &amp; enable flycheck pylint</code></p>
+<h3 id="modeline">modeline</h3>
+<p>对，我又换了一个 modeline&hellip; 我记得最早我使用 sml，后来用了一段时间的 spaceline，后来又换成了 sml with powerline theme，这次我换成了 doom-line。</p>
+<p>最早的时候我用过 doom-line，doom-line 是挺好看的，但是因为用了 all-the-icons，所以整个 modeline 很高，导致我在输入命令时，命令的候选项 buffer
+可能不是整数行，就会被截掉一段&hellip; 我当时强迫症看着好难受，但是搜了很多也没有特别好的处理方式，就没继续用。但是现在看淡了，modeline 好看就行。</p>
+<h2 id="后记">后记</h2>
+<p>其实前前后后还是花了一些时间，所以 vscode 真的是开箱即用哈哈哈。但是我还是比较喜欢 emacs，就是单纯的编辑的快感会多一些。有时候不得不为了开发效率或者配置问题使用 vscode
+我也不排斥，我觉得 vscode 也很好用，那么多插件想用就用&hellip;</p>
+<p>感觉折腾久了就有种亲儿子的感觉&hellip; 虽然最近很多时间我就用来写写博客，但是还是挺爽的，最近有空的话打算看看 lisp :)</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">nathan</span>
+  </p>
+  
+  
+  
+  
+  
+  
+  
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/emacs/">emacs</a>
+          <a href="/tags/python/">python</a>
+          </div>
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/%E8%81%8A%E8%81%8A%E6%9C%80%E8%BF%91-part2/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">聊聊最近 part2</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/%E8%81%8A%E8%81%8A%E6%9C%80%E8%BF%91-part3/">
+            <span class="next-text nav-default">聊聊最近 part3</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:nathanwu199606@gmail.com" class="iconfont icon-email" title="email"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    
+    
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2021
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">nathan</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-156459024-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

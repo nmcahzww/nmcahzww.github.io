@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nmcahzww</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Nmcahzww</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 19 Dec 2020 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Wed, 22 Jan 2020 09:43:52 +0800</pubDate>
+      
+      <guid>http://localhost:1313/about/</guid>
+      <description>关于我： 没啥-。-</description>
+    </item>
+    
+    <item>
+      <title>聊聊最近 part3</title>
+      <link>http://localhost:1313/post/%E8%81%8A%E8%81%8A%E6%9C%80%E8%BF%91-part3/</link>
+      <pubDate>Sat, 19 Dec 2020 00:00:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E8%81%8A%E8%81%8A%E6%9C%80%E8%BF%91-part3/</guid>
+      <description>工作 其实工作没什么好说的，放在前面只是想早点写完忘掉它，因为明天是个上班的周日。 最近还挺忙的，不过比前阵子要好些吧。最近又开始陷入了一种矛盾</description>
+    </item>
+    
+    <item>
+      <title>搭建博客的记录</title>
+      <link>http://localhost:1313/post/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Wed, 22 Jan 2020 00:00:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%AE%B0%E5%BD%95/</guid>
+      <description>我比较懒，很久之前折腾过一次博客，但是养不成记录的习惯就荒废了，这次想重新折腾一下.. hugo 之前 这次是用了 hugo 来搭建博客，搭配 github page 非常简单。之前尝</description>
+    </item>
+    
+    <item>
+      <title>Emacs as Python IDE</title>
+      <link>http://localhost:1313/post/emacs_as_python_ide/</link>
+      <pubDate>Sat, 08 Aug 2020 00:00:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/emacs_as_python_ide/</guid>
+      <description>从用 emacs 作为 python 主力的开发环境已经有一阵子了，最近也是因为新的 python 项目折腾了挺久配置，打算记录下这些过程，就想到啥说啥吧。 初识 Emacs 我是从 2018 年 6 月开始</description>
+    </item>
+    
+    <item>
+      <title>聊聊最近 part2</title>
+      <link>http://localhost:1313/post/%E8%81%8A%E8%81%8A%E6%9C%80%E8%BF%91-part2/</link>
+      <pubDate>Mon, 03 Aug 2020 00:00:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E8%81%8A%E8%81%8A%E6%9C%80%E8%BF%91-part2/</guid>
+      <description>工作 终于有空闲下来更新一下了，距离上次的话主要是成功的换工作啦。虽然还是和以往的风格一样， 面了一家-&amp;gt;通过-&amp;gt;直接入职 ，但是也算</description>
+    </item>
+    
+    <item>
+      <title>聊聊最近</title>
+      <link>http://localhost:1313/post/%E8%81%8A%E8%81%8A%E6%9C%80%E8%BF%91/</link>
+      <pubDate>Thu, 12 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E8%81%8A%E8%81%8A%E6%9C%80%E8%BF%91/</guid>
+      <description>工作 最近在考虑换工作的事情，想要为自己寻找下一个合适的平台，导致生活工作节奏都紧了许多。 这是我转行做程序员以来考虑得最久也是最谨慎的一件事了</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/note/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/note/</guid>
+      <description>exp 搭建博客的记录&amp;#xa0;&amp;#xa0;&amp;#xa0;blog&amp;#xa0;org&amp;#xa0;@blog 我比较懒，很久之前折腾过一次博客，但是养</description>
+    </item>
+    
+  </channel>
+</rss>

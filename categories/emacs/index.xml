@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>emacs on Nmcahzww</title>
+    <link>http://localhost:1313/categories/emacs/</link>
+    <description>Recent content in emacs on Nmcahzww</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 08 Aug 2020 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/emacs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Emacs as Python IDE</title>
+      <link>http://localhost:1313/post/emacs_as_python_ide/</link>
+      <pubDate>Sat, 08 Aug 2020 00:00:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/emacs_as_python_ide/</guid>
+      <description>从用 emacs 作为 python 主力的开发环境已经有一阵子了，最近也是因为新的 python 项目折腾了挺久配置，打算记录下这些过程，就想到啥说啥吧。 初识 Emacs 我是从 2018 年 6 月开始</description>
+    </item>
+    
+  </channel>
+</rss>

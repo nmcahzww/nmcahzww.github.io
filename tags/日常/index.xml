@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>日常 on Nmcahzww</title>
+    <link>http://localhost:1313/tags/%E6%97%A5%E5%B8%B8/</link>
+    <description>Recent content in 日常 on Nmcahzww</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 19 Dec 2020 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/%E6%97%A5%E5%B8%B8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>聊聊最近 part3</title>
+      <link>http://localhost:1313/post/%E8%81%8A%E8%81%8A%E6%9C%80%E8%BF%91-part3/</link>
+      <pubDate>Sat, 19 Dec 2020 00:00:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E8%81%8A%E8%81%8A%E6%9C%80%E8%BF%91-part3/</guid>
+      <description>工作 其实工作没什么好说的，放在前面只是想早点写完忘掉它，因为明天是个上班的周日。 最近还挺忙的，不过比前阵子要好些吧。最近又开始陷入了一种矛盾</description>
+    </item>
+    
+    <item>
+      <title>聊聊最近 part2</title>
+      <link>http://localhost:1313/post/%E8%81%8A%E8%81%8A%E6%9C%80%E8%BF%91-part2/</link>
+      <pubDate>Mon, 03 Aug 2020 00:00:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E8%81%8A%E8%81%8A%E6%9C%80%E8%BF%91-part2/</guid>
+      <description>工作 终于有空闲下来更新一下了，距离上次的话主要是成功的换工作啦。虽然还是和以往的风格一样， 面了一家-&amp;gt;通过-&amp;gt;直接入职 ，但是也算</description>
+    </item>
+    
+    <item>
+      <title>聊聊最近</title>
+      <link>http://localhost:1313/post/%E8%81%8A%E8%81%8A%E6%9C%80%E8%BF%91/</link>
+      <pubDate>Thu, 12 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E8%81%8A%E8%81%8A%E6%9C%80%E8%BF%91/</guid>
+      <description>工作 最近在考虑换工作的事情，想要为自己寻找下一个合适的平台，导致生活工作节奏都紧了许多。 这是我转行做程序员以来考虑得最久也是最谨慎的一件事了</description>
+    </item>
+    
+  </channel>
+</rss>

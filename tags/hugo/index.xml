@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on Nmcahzww - We all wonder about the path we didn&#39;t follow.</title>
+    <link>http://localhost:1313/tags/hugo/</link>
+    <description>Recent content in hugo on Nmcahzww - We all wonder about the path we didn&#39;t follow.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 20 Jan 2020 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>test writing blog in hugo</title>
+      <link>http://localhost:1313/post/test-writing-blog-in-hugo/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/test-writing-blog-in-hugo/</guid>
+      <description>first heading This is a post.
+sub heading hello.</description>
+    </item>
+    
+  </channel>
+</rss>

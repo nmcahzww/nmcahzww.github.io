@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>org on Nmcahzww</title>
+    <link>http://localhost:1313/tags/org/</link>
+    <description>Recent content in org on Nmcahzww</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 22 Jan 2020 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>搭建博客的记录</title>
+      <link>http://localhost:1313/post/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Wed, 22 Jan 2020 00:00:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%AE%B0%E5%BD%95/</guid>
+      <description>我比较懒，很久之前折腾过一次博客，但是养不成记录的习惯就荒废了，这次想重新折腾一下.. hugo 之前 这次是用了 hugo 来搭建博客，搭配 github page 非常简单。之前尝</description>
+    </item>
+    
+  </channel>
+</rss>
